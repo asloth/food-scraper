@@ -10,6 +10,6 @@ class FoodspiderSpider(scrapy.Spider):
         food = response.css('div.elementor-widget-container')
         for food in foods:
             yield {
-                'name': food.css('figure figcaption::text').get()
+                #   'name': food.css('figure figcaption::text').get()
                 'url': food.css('figure a').attrib['href']
             }
